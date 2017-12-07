@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img :src=imageSource @mouseover ="mouseOver" @mouseleave= "mouseLeave">
+    <img id="portrait" :src=imageSource @mouseover ="mouseOver" @mouseleave= "mouseLeave">
 
     <transition name="fade" mode="out-in">
       <h1 v-if="show">Joe Wood</h1>
@@ -84,7 +84,7 @@ header {
   color: #ffffff;
 }
 
-img {
+#portrait {
   object-fit: cover;
   border-radius:50%;
   background-size: cover;
