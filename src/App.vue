@@ -1,25 +1,12 @@
 <template>
   <div id="app">
-    <images-viewer></images-viewer>
-
-    <button id="show-modal" @click="showModal = true">Show Modal</button>
-    <!-- use the modal component, pass in the prop -->
-    <modal v-if="showModal" @close="showModal = false">
-      <!--
-        you can use custom content here to overwrite
-        default content
-      -->
-      <h3 slot="header">custom header</h3>
-    </modal>
-
     <transition name="fade" mode="out-in">
       <h1 v-if="show">Joe Wood</h1>
     </transition>
-    <button class="astext" v-on:click = "show = !show"><a>CV</a></button>
-    <p><a href="photography.html">Photography</a></p>
+    <button class="astext" v-on:click = "showPdf"><a>CV</a></button>
+    <pdf src="./static/JoeWoodCV2017.pdf"></pdf>
 
-
-
+    <p><a href=".html">Photography</a></p>
     <div id="iconlinks">
       <a href="https://github.com/woodj22"> <icon name="github" scale="4">
       </icon></a>
@@ -32,6 +19,10 @@
 <script>
   import 'vue-awesome/icons/github'
   import 'vue-awesome/icons/linkedin'
+  import pdf from 'vue-pdf'
+
+  import image from './assets/logo.png'
+//  import p from './JoeWoodCV2017.pdf'
 
   export default {
     name: 'app',
@@ -41,11 +32,21 @@
         show: false,
         counter: 0,
         cvView: false,
-        showModal: false
+        showModal: false,
+        image: image,
+        pdfer: './static/JoeWoodCV2017.pdf'
       }
     },
     mounted: function () {
       this.show = true
+    },
+    methods: {
+      showPdf: function () {
+        window.open(pdf)
+      }
+    },
+    components: {
+      pdf
     }
   }
 </script>
