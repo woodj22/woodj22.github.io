@@ -1,10 +1,11 @@
 <template>
   <div id="app">
+    <img :src=imageSource @mouseover ="mouseOver" @mouseleave= "mouseLeave">
+
     <transition name="fade" mode="out-in">
       <h1 v-if="show">Joe Wood</h1>
     </transition>
     <button class="astext" v-on:click = "showPdf"><a>CV</a></button>
-    <pdf src="./static/JoeWoodCV2017.pdf"></pdf>
 
     <p><a href=".html">Photography</a></p>
     <div id="iconlinks">
@@ -19,10 +20,6 @@
 <script>
   import 'vue-awesome/icons/github'
   import 'vue-awesome/icons/linkedin'
-  import pdf from 'vue-pdf'
-
-  import image from './assets/logo.png'
-//  import p from './JoeWoodCV2017.pdf'
 
   export default {
     name: 'app',
@@ -33,8 +30,8 @@
         counter: 0,
         cvView: false,
         showModal: false,
-        image: image,
-        pdfer: './static/JoeWoodCV2017.pdf'
+        imageSource: './static/Joe_Ok.jpg',
+        secondImageSource: './static/Joe_funny.jpg'
       }
     },
     mounted: function () {
@@ -42,11 +39,15 @@
     },
     methods: {
       showPdf: function () {
-        window.open(pdf)
+        window.open('./static/JoeWoodCV2017.pdf')
+      },
+      mouseOver: function () {
+        this.imageSource = this.secondImageSource
+        console.log('hello')
+      },
+      mouseLeave: function () {
+        this.imageSource = './static/Joe_Ok.jpg'
       }
-    },
-    components: {
-      pdf
     }
   }
 </script>
@@ -81,6 +82,16 @@ header {
   padding: 0 16px 0 24px;
   background-color: #35495E;
   color: #ffffff;
+}
+
+img {
+  object-fit: cover;
+  border-radius:50%;
+  background-size: cover;
+  /*align: middle;*/
+  background-position: top center;
+  width: 200px;
+  height: 200px;
 }
 
 header span {
