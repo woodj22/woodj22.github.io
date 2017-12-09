@@ -1,20 +1,25 @@
 <template>
   <div id="app">
-    <img id="portrait" :src=imageSource @mouseover ="mouseOver" @mouseleave= "mouseLeave">
-
-    <transition name="fade" mode="out-in">
-      <h1 v-if="show">Joe Wood</h1>
-    </transition>
-    <button class="astext" v-on:click = "showPdf"><a>CV</a></button>
-
-    <p><a href=".html">Photography</a></p>
+    <img id="portrait" :src=defaultImageSource @mouseover ="mouseOver" @mouseleave= "mouseLeave">
     <div id="iconlinks">
       <a href="https://github.com/woodj22"> <icon name="github" scale="4">
       </icon></a>
       <a href="https://www.linkedin.com/in/joe-wood-3237876b/"> <icon name="linkedin" scale="4">
       </icon></a>
     </div>
+    <transition name="fade" mode="out-in">
+      <h1 v-if="show">Joe Wood</h1>
+    </transition>
+    <button class="astext" v-on:click = "showPdf"><a>CV</a></button>
+    <p><a>Photography</a></p>
+    <div class="viewPortal">
+    <div v-for="(pic, index) in imageItems">
+      <img id="imageView" :src="getPic(index)" v-bind:alt="pic">
+    </div>
+    </div>
+
   </div>
+
 
 </template>
 <script>
@@ -30,8 +35,13 @@
         counter: 0,
         cvView: false,
         showModal: false,
+        defaultImageSource: './static/Joe_Ok.jpg',
         imageSource: './static/Joe_Ok.jpg',
-        secondImageSource: './static/Joe_funny.jpg'
+        secondImageSource: './static/Joe_funny.jpg',
+        imageItems: [
+          'joe_in_field',
+          'joe_in_field_1'
+        ]
       }
     },
     mounted: function () {
@@ -42,11 +52,14 @@
         window.open('./static/JoeWoodCV2017.pdf')
       },
       mouseOver: function () {
-        this.imageSource = this.secondImageSource
+        this.defaultImageSource = this.secondImageSource
         console.log('hello')
       },
       mouseLeave: function () {
-        this.imageSource = './static/Joe_Ok.jpg'
+        this.defaultImageSource = this.imageSource
+      },
+      getPic: function (index) {
+        return './static/display_images/' + this.imageItems[index] + '.jpg'
       }
     }
   }
@@ -94,6 +107,17 @@ header {
   height: 200px;
 }
 
+#imageView {
+  /*height: 200px;*/
+  width: 100%;
+  /*left: 50%;*/
+  /*margin-left: -9em;*/
+  /*display: block;*/
+  /*text-align: center;*/
+  /*width: 600px;*/
+  /*height: auto;*/
+  /*padding: 10px;*/
+}
 header span {
   display: block;
   position: relative;
@@ -115,6 +139,9 @@ h1 {
     left: 4px;
 }
 
+.viewPortal {
+  padding-top: 30px;
+}
 .astext {
     background:none;
     border:none;
