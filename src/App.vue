@@ -1,25 +1,26 @@
 <template>
   <div id="app">
-    <img id="portrait" :src=defaultImageSource @mouseover ="mouseOver" @mouseleave= "mouseLeave">
-    <div id="iconlinks">
-      <a href="https://github.com/woodj22"> <icon name="github" scale="4">
-      </icon></a>
-      <a href="https://www.linkedin.com/in/joe-wood-3237876b/"> <icon name="linkedin" scale="4">
-      </icon></a>
+    <div id="main">
+      <img id="portrait" :src=defaultImageSource @mouseover ="mouseOver" @mouseleave= "mouseLeave">
+      <div id="iconlinks">
+        <a href="https://github.com/woodj22"> <icon name="github" scale="4">
+        </icon></a>
+        <a href="https://www.linkedin.com/in/joe-wood-3237876b/"> <icon name="linkedin" scale="4">
+        </icon></a>
+      </div>
+      <transition name="fade" mode="out-in">
+        <h1 v-if="show">Joe Wood</h1>
+      </transition>
+      <button class="astext" v-on:click ="showPdf"><a>CV</a></button>
+      <p><a>Photography</a></p>
+
     </div>
-    <transition name="fade" mode="out-in">
-      <h1 v-if="show">Joe Wood</h1>
-    </transition>
-    <button class="astext" v-on:click = "showPdf"><a>CV</a></button>
-    <p><a>Photography</a></p>
-    <div class="viewPortal">
-    <div v-for="(pic, index) in imageItems">
-      <img id="imageView" :src="getPic(index)" v-bind:alt="pic">
-    </div>
-    </div>
+
+      <div id="grid">
+          <img id = "imager" v-for="(pic, index) in imageItems" :src="getPic(index)"/>
+      </div>
 
   </div>
-
 
 </template>
 <script>
@@ -40,12 +41,24 @@
         secondImageSource: './static/Joe_funny.jpg',
         imageItems: [
           'joe_in_field',
-          'joe_in_field_1'
+          'joe_in_field_1',
+          'Joe_WOOD-19',
+          'Joe_WOOD-40',
+          'Joe_WOOD-97',
+          'Joe_WOOD-142',
+          'Joe_WOOD-171',
+          'Joe_WOOD-207',
+          'Joe_WOOD-209'
         ]
       }
     },
     mounted: function () {
       this.show = true
+    },
+    computed: {
+      imageControl: function () {
+        return this.imageItems
+      }
     },
     methods: {
       showPdf: function () {
@@ -66,29 +79,51 @@
 </script>
 
 <style>
-body {
-  margin: 0;
-}
 
-#app {
+#main {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  z-index: 15;
+  top: 30%;
+  left: 50%;
+
+  margin: -100px 0 0 -150px;
   font-family: 'Helvetica';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-   position: absolute;
-   width: 320px;
-   text-align: center;
-   top: 50%;
-   left: 50%;
-   margin-left: -10em;
-   margin-top: -9em;
-}
-
-main {
+  position: absolute;
   text-align: center;
-  margin-top: 40px;
+  /*position: absolute;*/
+  /*color: #2c3e50;*/
+  /*text-align: center;*/
 }
 
+#grid {
+
+
+  top: 95%;
+  left:35%;
+
+  margin: -100px 0 0 -150px;
+  position: absolute;
+  /*!*!*float:left;*!  clear: both;*!*/
+  /*width: 40%;*/
+
+  /*top: 50%;*/
+  /*bottom: 50%;*/
+
+  /*height: auto;*/
+
+}
+#imager {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+  /*background-size: cover;*/
+
+  padding: 30px;
+}
 header {
   margin: 0;
   height: 56px;
@@ -107,17 +142,8 @@ header {
   height: 200px;
 }
 
-#imageView {
-  /*height: 200px;*/
-  width: 100%;
-  /*left: 50%;*/
-  /*margin-left: -9em;*/
-  /*display: block;*/
-  /*text-align: center;*/
-  /*width: 600px;*/
-  /*height: auto;*/
-  /*padding: 10px;*/
-}
+
+
 header span {
   display: block;
   position: relative;
