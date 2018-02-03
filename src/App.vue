@@ -81,7 +81,7 @@
 #main {
   display: block;
   margin-left: auto;
-  margin-top: 5em; /*set to a negative number 1/2 of your height*/
+  margin-top: 8em; /*set to a negative number 1/2 of your height*/
   top : 50%;
   margin-right: auto;
   width: 40%;
