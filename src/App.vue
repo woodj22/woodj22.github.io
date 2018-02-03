@@ -2,24 +2,22 @@
   <div id="app">
     <div id="main">
       <img id="portrait" :src=defaultImageSource @mouseover ="mouseOver" @mouseleave= "mouseLeave">
-      <div id="iconlinks">
+      <nav id="iconlinks">
         <a href="https://github.com/woodj22"> <icon name="github" scale="4">
         </icon></a>
         <a href="https://www.linkedin.com/in/joe-wood-3237876b/"> <icon name="linkedin" scale="4">
         </icon></a>
-      </div>
+      </nav>
       <transition name="fade" mode="out-in">
         <h1 v-if="show">Joe Wood</h1>
       </transition>
-      <button class="astext" v-on:click ="showPdf"><a>CV</a></button>
-      <p><a>Photography</a></p>
-
+      <button class="astext" v-on:click ="showPdf"><h2><a>CV</a></h2></button>
     </div>
 
-      <div id="grid">
+    <div id="grid">
+      <h1><a>Photography</a></h1>
           <img id = "imager" v-for="(pic, index) in imageItems" :src="getPic(index)"/>
       </div>
-
   </div>
 
 </template>
@@ -81,48 +79,34 @@
 <style>
 
 #main {
-  position: absolute;
-  width: 300px;
-  height: 200px;
-  z-index: 15;
-  top: 30%;
-  left: 50%;
-
-  margin: -100px 0 0 -150px;
+  display: block;
+  margin-left: auto;
+  margin-top: 5em; /*set to a negative number 1/2 of your height*/
+  top : 50%;
+  margin-right: auto;
+  width: 40%;
   font-family: 'Helvetica';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  position: absolute;
   text-align: center;
-  /*position: absolute;*/
-  /*color: #2c3e50;*/
-  /*text-align: center;*/
 }
 
 #grid {
+  display: block;
+  margin-left: auto;
+  margin-top: 1em; /*set to a negative number 1/2 of your height*/
+  margin-right: auto;
+  font-family: 'Helvetica';
+  text-align: center;
 
 
-  top: 95%;
-  left:35%;
-
-  margin: -100px 0 0 -150px;
-  position: absolute;
-  /*!*!*float:left;*!  clear: both;*!*/
-  /*width: 40%;*/
-
-  /*top: 50%;*/
-  /*bottom: 50%;*/
-
-  /*height: auto;*/
 
 }
 #imager {
-  width: 600px;
-  height: 400px;
-  object-fit: cover;
-  /*background-size: cover;*/
-
-  padding: 30px;
+  width: 60%;
+  height:auto;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 header {
   margin: 0;
@@ -136,13 +120,10 @@ header {
   object-fit: cover;
   border-radius:50%;
   background-size: cover;
-  /*align: middle;*/
   background-position: top center;
   width: 200px;
   height: 200px;
 }
-
-
 
 header span {
   display: block;
@@ -165,8 +146,13 @@ h1 {
     left: 4px;
 }
 
-.viewPortal {
-  padding-top: 30px;
+h2 {
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 9px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  left: 4px;
 }
 .astext {
     background:none;
@@ -175,9 +161,6 @@ h1 {
     text-decoration: none;
     padding-bottom: 10px;
     padding-top: 10px;
-}
-#cvObject {
-    display: None;
 }
 
 
@@ -195,17 +178,14 @@ a {
     padding-top: 10px;
 }
 
-#iconlinks {
-    padding-top: 20px;
-}
 #iconlinks a {
     color: #41abff;
+  padding-top: 20px;
     padding-right: 20px;
     padding-left: 20px;
 }
 p {
     color: rgba(17, 60, 88, 0.36);
-
 }
 
 </style>
