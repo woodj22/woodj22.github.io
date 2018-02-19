@@ -12,11 +12,12 @@
   },
   "dependencies": {
     "vue": "^2.5.2",
+    "vue-awesome": "^2.3.4",
     "vue-carousel": "^0.6.5",
     "vue-images-viewer": "^1.1.0",
     "vue-pdf": "^2.0.4",
+    "vue-photo-grid": "^1.0.2",
     "vue-router": "^3.0.1",
-    "vuejs-carousel": "^0.6.0",
     "vuejs-images-viewer": "^1.0.8"
   },
   "devDependencies": {

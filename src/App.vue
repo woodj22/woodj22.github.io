@@ -38,15 +38,18 @@
         imageSource: './static/Joe_Ok.jpg',
         secondImageSource: './static/Joe_funny.jpg',
         imageItems: [
-          'joe_in_field',
-          'joe_in_field_1',
-          'Joe_WOOD-19',
-          'Joe_WOOD-40',
-          'Joe_WOOD-97',
-          'Joe_WOOD-142',
-          'Joe_WOOD-171',
-          'Joe_WOOD-207',
-          'Joe_WOOD-209'
+          'website_ex-1',
+          'website_ex-2',
+          'website_ex-3',
+          'website_ex-4',
+          'website_ex-5',
+          'website_ex-6',
+          'website_ex-7',
+          'website_ex-8',
+          'website_ex-9',
+          'website_ex-10',
+          'website_ex-11',
+          'website_ex-12'
         ]
       }
     },
@@ -70,7 +73,7 @@
         this.defaultImageSource = this.imageSource
       },
       getPic: function (index) {
-        return './static/display_images/' + this.imageItems[index] + '.jpg'
+        return './static/18_website_export/' + this.imageItems[index] + '.jpg'
       }
     }
   }
@@ -103,9 +106,11 @@
 
 }
 #imager {
-  width: 60%;
+  width: 40%;
   height:auto;
   padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
   padding-top: 5px;
 }
 header {
