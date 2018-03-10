@@ -67,7 +67,6 @@
       },
       mouseOver: function () {
         this.defaultImageSource = this.secondImageSource
-        console.log('hello')
       },
       mouseLeave: function () {
         this.defaultImageSource = this.imageSource
