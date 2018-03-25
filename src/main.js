@@ -9,18 +9,12 @@ import PhotoGrid from 'vue-photo-grid'
 Vue.config.productionTip = false
 Vue.component('icon', Icon)
 
-Vue.component('modal', {
-  template: '#modal-template'
-})
-
 Vue.use(PhotoGrid)
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  show: 'asfc',
-  myName: 'hellworld',
   template: '<App/>',
   data: {
     showModal: false
