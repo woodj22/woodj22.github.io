@@ -50,7 +50,7 @@
           'website_ex-10',
           'website_ex-11',
           'website_ex-12',
-          'website_ex_13'
+          'website_ex-13'
         ]
       }
     },
