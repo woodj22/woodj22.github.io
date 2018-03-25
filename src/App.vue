@@ -11,7 +11,7 @@
       <transition name="fade" mode="out-in">
         <h1 v-if="show">Joe Wood</h1>
       </transition>
-      <button class="astext" v-on:click ="showPdf"><h2><a>CV</a></h2></button>
+      <button class="astext" v-on:click ="showPdf"><h2><a href="">CV</a></h2></button>
     </div>
 
     <div id="grid">
@@ -100,8 +100,10 @@
   margin-right: auto;
   font-family: 'Helvetica';
   text-align: center;
+}
 
-
+.button {
+  cursor: pointer;
 
 }
 #imager {
@@ -146,16 +148,15 @@ h1 {
     font-size: 30px;
     letter-spacing: 9px;
     text-transform: uppercase;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     left: 4px;
 }
 
 h2 {
-  font-weight: 700;
   font-size: 15px;
   letter-spacing: 9px;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   left: 4px;
 }
 .astext {
