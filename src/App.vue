@@ -63,7 +63,7 @@
     },
     methods: {
       showPdf: function () {
-        window.open('./static/JoeWoodCV2017.pdf')
+        window.open('./static/JoeWoodCV2018.pdf')
       },
       mouseOver: function () {
         this.defaultImageSource = this.secondImageSource
