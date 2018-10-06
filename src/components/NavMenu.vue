@@ -1,19 +1,47 @@
 <template>
   <div id="nav-menu">
+
     <div class="nav-menu-piece">
-      <button class="astext" v-on:click ="openLinkInAnotherTab(relativeCVPath)"><h2><a href="">CV</a></h2></button>
+      <button class="astext" v-on:click="openLinkInAnotherTab(relativeCVPath)">
+        <h2>
+          <a href="" @mouseover="changeButtonTextToBigger($event)"
+             @mouseleave="changeButtonTextToSmaller($event)">CV</a>
+        </h2>
+      </button>
     </div>
     <div class="nav-menu-piece">
-      <router-link to="/photography"><h2><a href="">Photography</a></h2></router-link>
+      <router-link to="/photography">
+        <h2>
+          <a href="" @mouseover="changeButtonTextToBigger($event)" @mouseleave="changeButtonTextToSmaller($event)">Photography</a>
+        </h2>
+      </router-link>
     </div>
 
     <div class="nav-menu-piece">
-      <button class="astext" v-on:click ="openLinkInAnotherTab(linkedInURL)"><h2><a href="">LinkedIn</a></h2></button>
+      <button class="astext" v-on:click="openLinkInAnotherTab(linkedInURL)">
+        <h2>
+          <a href="" @mouseover="changeButtonTextToBigger($event)" @mouseleave="changeButtonTextToSmaller($event)">LinkedIn</a>
+        </h2>
+      </button>
     </div>
 
     <div class="nav-menu-piece">
-      <button class="astext" v-on:click ="openLinkInAnotherTab(githubURL)"><h2><a href="">Github</a></h2></button>
+      <button class="astext" v-on:click="openLinkInAnotherTab(githubURL)">
+        <h2>
+          <a href="" @mouseover="changeButtonTextToBigger($event)"
+             @mouseleave="changeButtonTextToSmaller($event)">Github</a>
+        </h2>
+      </button>
     </div>
+
+    <div class="nav-menu-piece">
+      <router-link to="/">
+        <h2>
+          <a href="" @mouseover="changeButtonTextToBigger($event)" @mouseleave="changeButtonTextToSmaller($event)">About</a>
+        </h2>
+      </router-link>
+    </div>
+
   </div>
 </template>
 <script>
@@ -29,6 +57,17 @@
     methods: {
       openLinkInAnotherTab: function (uri) {
         window.open(uri)
+      },
+      changeButtonTextToBigger: function (event) {
+        const objectToChange = event.path[0]
+        console.log(objectToChange.style.fontWeight)
+        objectToChange.style.fontWeight = 700
+      },
+      changeButtonTextToSmaller: function (event) {
+        const objectToChange = event.path[0]
+        console.log(objectToChange)
+        objectToChange.style.fontWeight = 500
+        console.log('i am meant to be getting small')
       }
     }
   }
@@ -52,14 +91,13 @@
     left: 4px;
   }
 
-
   a {
+    font-weight: 500;
     color: rgba(17, 60, 88, 0.44);
     text-decoration: none;
     padding-bottom: 10px;
     padding-top: 10px;
   }
-
 
   .nav-menu-piece {
     padding: 10px;
