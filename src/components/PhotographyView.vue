@@ -1,5 +1,6 @@
 <template>
   <div class="photography">
+    <custom-image imagePath='../../static/18_website_export/website_ex-1.jpg' info="University tuition fee price rise riots."></custom-image>
   <nav-menu></nav-menu>
   <div id="grid">
     <h1><a>Photography</a></h1>
@@ -10,6 +11,7 @@
 
 <script>
   import NavMenu from '@/components/NavMenu'
+  import CustomImage from '@/components/CustomImage'
   export default {
     name: 'Photography',
     data () {
@@ -36,7 +38,7 @@
         return '../../static/18_website_export/' + this.imageItems[index] + '.jpg'
       }
     },
-    components: { NavMenu }
+    components: { NavMenu, CustomImage }
   }
 </script>
 

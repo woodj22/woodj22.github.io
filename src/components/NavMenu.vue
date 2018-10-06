@@ -44,6 +44,13 @@
     left: 4px;
   }
 
+  h2 {
+    font-size: 15px;
+    letter-spacing: 9px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    left: 4px;
+  }
 
 
   a {

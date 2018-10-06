@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Icon from 'vue-awesome/components/Icon'
 import PhotoGrid from 'vue-photo-grid'
 import HomeView from '@/components/HomeView'
-import Photography from '@/components/Photography'
+import PhotographyView from '@/components/PhotographyView'
 import CV from '@/components/CV'
 
 Vue.use(Router)
@@ -20,7 +20,7 @@ export default new Router({
     {
       path: '/photography',
       name: 'Photography',
-      component: Photography
+      component: PhotographyView
     },
     {
       path: '/cv',

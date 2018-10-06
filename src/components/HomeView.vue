@@ -14,7 +14,7 @@
       </transition>
       <h2>Software Engineer</h2>
       <!--<p id="intro-text">-->
-        <!--I have no clue what I am doing.-->
+      <!--I have no clue what I am doing.-->
       <!--</p>-->
     </div>
     <nav-menu></nav-menu>
@@ -55,7 +55,7 @@
         this.defaultImageSource = this.imageSource
       }
     },
-    components: { NavMenu }
+    components: {NavMenu}
   }
 </script>
 <style>
@@ -88,9 +88,9 @@
     width: 200px;
     height: 200px;
   }
+
   p {
     color: rgb(17, 60, 88);
-    /*opacity: 100;*/
   }
 
   h2 {
@@ -100,7 +100,6 @@
     margin-bottom: 10px;
     left: 4px;
   }
-
 
   .fade-enter-active, .fade-leave-active {
     transition: opacity 5s
