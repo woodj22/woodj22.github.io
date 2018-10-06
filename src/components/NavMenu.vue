@@ -1,14 +1,15 @@
 <template>
   <div id="nav-menu">
 
+
     <div class="nav-menu-piece">
-      <button class="astext" v-on:click="openLinkInAnotherTab(relativeCVPath)">
+      <router-link to="/">
         <h2>
-          <a href="" @mouseover="changeButtonTextToBigger($event)"
-             @mouseleave="changeButtonTextToSmaller($event)">CV</a>
+          <a href="" @mouseover="changeButtonTextToBigger($event)" @mouseleave="changeButtonTextToSmaller($event)">About</a>
         </h2>
-      </button>
+      </router-link>
     </div>
+
     <div class="nav-menu-piece">
       <router-link to="/photography">
         <h2>
@@ -35,11 +36,12 @@
     </div>
 
     <div class="nav-menu-piece">
-      <router-link to="/">
+      <button class="astext" v-on:click="openLinkInAnotherTab(relativeCVPath)">
         <h2>
-          <a href="" @mouseover="changeButtonTextToBigger($event)" @mouseleave="changeButtonTextToSmaller($event)">About</a>
+          <a href="" @mouseover="changeButtonTextToBigger($event)"
+             @mouseleave="changeButtonTextToSmaller($event)">CV</a>
         </h2>
-      </router-link>
+      </button>
     </div>
 
   </div>

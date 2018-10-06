@@ -1,9 +1,8 @@
 <template>
   <div id="custom-image">
     <div id="container">
-      <div id="image-text">{{info}}</div>
-      <img id="image" :src="imagePath" @mouseover="displayImageInformation" @mouseleave="removeImageInformation"/>
-
+      <img id="image" :src="imagePath"/>
+      <h2 class="caption">{{info}}</h2>
     </div>
   </div>
 </template>
@@ -17,30 +16,8 @@
       }
     },
     methods: {
-      getPic: function (index) {
+      createImageFilePath: function (index) {
         return '../../static/18_website_export/' + this.imageItems[index] + '.jpg'
-      },
-      displayImageInformation: function () {
-        const elem = document.getElementById('container')
-        elem.style.backgroundColor = 'rgb(53, 73, 94)'
-
-        const img = document.getElementById('image')
-        img.style.opacity = 0.1
-
-        const imgText = document.getElementById('image-text')
-        imgText.style.opacity = 2
-        console.log('hello world')
-      },
-      removeImageInformation: function () {
-        const elem = document.getElementById('container')
-        elem.style.opacity = 1
-
-        const img = document.getElementById('image')
-        img.style.opacity = 1
-
-        const imgText = document.getElementById('image-text')
-        imgText.style.opacity = 0
-        console.log('hello world')
       }
     }
   }
@@ -51,23 +28,38 @@
   #container {
     display: inline-block;
     backgroundColor: rgb(53, 73, 94);
+    width: 100%;
+    max-width: 700px;
+    position: relative;
   }
 
   #image {
     width: 100%;
-    max-width: 400px;
+    max-width: 800px;
   }
 
-  #image-text {
-    font-family: 'Helvetica';
-    color: rgb(255, 255, 255);
+  .caption {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-weight: bold;
+    line-height: 1.1em;
+  }
 
+  #container:hover .caption {
+    font-family: 'Helvetica';
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0;
     max-width: 400px;
+    display: block;
+  }
+
+  #container:hover #image {
+    opacity: 0.3;
   }
 
   #container-mouseover {
