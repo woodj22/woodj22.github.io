@@ -13,7 +13,7 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
-    "vue": "^2.5.2",
+    "vue": "^2.5.17",
     "vue-awesome": "^2.3.4",
     "vue-carousel": "^0.6.5",
     "vue-images-viewer": "^1.1.0",
