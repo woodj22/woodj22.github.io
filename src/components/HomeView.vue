@@ -5,7 +5,7 @@
       <name-strap job ="Software Engineer"></name-strap>
     </div>
     <nav-menu></nav-menu>
-    <h1><a>About</a></h1>
+    <h1 id="section-title"><a>About</a></h1>
 
     <div id="about-text">
       <p>
@@ -63,14 +63,6 @@
     text-align: center;
   }
 
-  header {
-    margin: 0;
-    height: 56px;
-    padding: 0 16px 0 24px;
-    background-color: #35495E;
-    color: #ffffff;
-  }
-
   #portrait {
     object-fit: cover;
     border-radius: 50%;
@@ -84,20 +76,5 @@
     width: 40%;
     display: inline-block;
   }
-
-  p {
-    color: rgb(17, 60, 88);
-    font-size: 15px;
-    letter-spacing: 2px;
-  }
-
-  h2 {
-    font-size: 15px;
-    letter-spacing: 9px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    left: 4px;
-  }
-
 
 </style>

@@ -4,7 +4,7 @@
     <nav-menu></nav-menu>
     <transition name="fade" mode="out-in">
     </transition>
-      <h1><a>Photography</a></h1>
+      <h1 id="section-title"><a>Photography</a></h1>
     <div id="grid">
       <custom-image v-for="(imageItem, infoString) in imageItems"
                     :imagePath="createImageFilePath(imageItem)"
@@ -53,15 +53,6 @@
 </script>
 
 <style>
-
-  #imager {
-    width: 40%;
-    height: auto;
-    padding-bottom: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 5px;
-  }
 
   #grid {
     display: block;
