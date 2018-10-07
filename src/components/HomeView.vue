@@ -18,6 +18,17 @@
       <!--</p>-->
     </div>
     <nav-menu></nav-menu>
+
+    <div id="about-text">
+      <p>
+        I work full time in the BBC's internal software engineering team. I mostly work with PHP Laravel projects
+        but I am doing more and more serverless event driven architecture in AWS. <br>
+        <br>
+        <br>
+        In my spare time I take pictures and building Alexa skills.
+      </p>
+    </div>
+
   </div>
 
 </template>
@@ -89,8 +100,15 @@
     height: 200px;
   }
 
+  #about-text {
+    width: 40%;
+    display: inline-block;
+  }
+
   p {
     color: rgb(17, 60, 88);
+    font-size: 15px;
+    letter-spacing: 2px;
   }
 
   h2 {

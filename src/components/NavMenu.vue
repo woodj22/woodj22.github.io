@@ -21,7 +21,7 @@
     <div class="nav-menu-piece">
       <button class="astext" v-on:click="openLinkInAnotherTab(linkedInURL)">
         <h2>
-          <a href="" @mouseover="changeButtonTextToBigger($event)" @mouseleave="changeButtonTextToSmaller($event)">LinkedIn</a>
+          <a @mouseover="changeButtonTextToBigger($event)" @mouseleave="changeButtonTextToSmaller($event)">LinkedIn</a>
         </h2>
       </button>
     </div>
@@ -29,7 +29,7 @@
     <div class="nav-menu-piece">
       <button class="astext" v-on:click="openLinkInAnotherTab(githubURL)">
         <h2>
-          <a href="" @mouseover="changeButtonTextToBigger($event)"
+          <a @mouseover="changeButtonTextToBigger($event)"
              @mouseleave="changeButtonTextToSmaller($event)">Github</a>
         </h2>
       </button>
