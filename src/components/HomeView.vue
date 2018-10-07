@@ -2,22 +2,10 @@
   <div class="home">
     <div id="main">
       <img id="portrait" :src=defaultImageSource @mouseover="mouseOver" @mouseleave="mouseLeave">
-      <!--<nav id="iconlinks">-->
-      <!--<a href="https://github.com/woodj22"> <icon name="github" scale="4">-->
-      <!--</icon></a>-->
-      <!--<a href="https://www.linkedin.com/in/joe-wood-3237876b/"> <icon name="linkedin" scale="4">-->
-      <!--</icon></a>-->
-      <!--</nav>-->
-
-      <transition name="fade" mode="out-in">
-        <h1 v-if="show">Joe Wood</h1>
-      </transition>
-      <h2>Software Engineer</h2>
-      <!--<p id="intro-text">-->
-      <!--I have no clue what I am doing.-->
-      <!--</p>-->
+      <name-strap job ="Software Engineer"></name-strap>
     </div>
     <nav-menu></nav-menu>
+    <h1><a>About</a></h1>
 
     <div id="about-text">
       <p>
@@ -25,7 +13,7 @@
         but I am doing more and more serverless event driven architecture in AWS. <br>
         <br>
         <br>
-        In my spare time I take pictures and building Alexa skills.
+        In my spare time I take pictures and build Alexa skills.
       </p>
     </div>
 
@@ -36,26 +24,18 @@
   import 'vue-awesome/icons/github'
   import 'vue-awesome/icons/linkedin'
   import NavMenu from '@/components/NavMenu'
+  import NameStrap from '@/components/NameStrap'
 
   export default {
     name: 'Home',
     data () {
       return {
         myName: 'Joe Wood',
-        show: false,
         counter: 0,
         cvView: false,
         defaultImageSource: './static/Joe_Ok.jpg',
         imageSource: './static/Joe_Ok.jpg',
         secondImageSource: './static/Joe_funny.jpg'
-      }
-    },
-    mounted: function () {
-      this.show = true
-    },
-    computed: {
-      imageControl: function () {
-        return this.imageItems
       }
     },
     methods: {
@@ -66,7 +46,7 @@
         this.defaultImageSource = this.imageSource
       }
     },
-    components: {NavMenu}
+    components: {NavMenu, NameStrap}
   }
 </script>
 <style>
@@ -119,12 +99,5 @@
     left: 4px;
   }
 
-  .fade-enter-active, .fade-leave-active {
-    transition: opacity 5s
-  }
 
-  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
-  {
-    opacity: 0
-  }
 </style>

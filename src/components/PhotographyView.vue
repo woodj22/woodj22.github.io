@@ -1,8 +1,11 @@
 <template>
   <div class="photography">
+    <name-strap job="Photographer"></name-strap>
     <nav-menu></nav-menu>
-    <div id="grid">
+    <transition name="fade" mode="out-in">
+    </transition>
       <h1><a>Photography</a></h1>
+    <div id="grid">
       <custom-image v-for="(imageItem, infoString) in imageItems"
                     :imagePath="createImageFilePath(imageItem)"
                     :info="createInfoString(imageItem)"
@@ -15,6 +18,7 @@
 <script>
   import NavMenu from '@/components/NavMenu'
   import CustomImage from '@/components/CustomImage'
+  import NameStrap from '@/components/NameStrap'
   export default {
     name: 'Photography',
     data () {
@@ -44,7 +48,7 @@
         return imageItem[1]
       }
     },
-    components: {NavMenu, CustomImage}
+    components: {NavMenu, CustomImage, NameStrap}
   }
 </script>
 

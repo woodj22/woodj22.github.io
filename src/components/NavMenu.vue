@@ -24,6 +24,7 @@
           <a @mouseover="changeButtonTextToBigger($event)" @mouseleave="changeButtonTextToSmaller($event)">LinkedIn</a>
         </h2>
       </button>
+      </button>
     </div>
 
     <div class="nav-menu-piece">
@@ -38,7 +39,7 @@
     <div class="nav-menu-piece">
       <button class="astext" v-on:click="openLinkInAnotherTab(relativeCVPath)">
         <h2>
-          <a href="" @mouseover="changeButtonTextToBigger($event)"
+          <a @mouseover="changeButtonTextToBigger($event)"
              @mouseleave="changeButtonTextToSmaller($event)">CV</a>
         </h2>
       </button>
@@ -62,14 +63,11 @@
       },
       changeButtonTextToBigger: function (event) {
         const objectToChange = event.path[0]
-        console.log(objectToChange.style.fontWeight)
         objectToChange.style.fontWeight = 700
       },
       changeButtonTextToSmaller: function (event) {
         const objectToChange = event.path[0]
-        console.log(objectToChange)
         objectToChange.style.fontWeight = 500
-        console.log('i am meant to be getting small')
       }
     }
   }
