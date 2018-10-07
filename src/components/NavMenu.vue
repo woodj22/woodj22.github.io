@@ -1,11 +1,10 @@
 <template>
   <div id="nav-menu">
-
-
     <div class="nav-menu-piece">
       <router-link to="/">
         <h2>
-          <a href="" @mouseover="changeButtonTextToBigger($event)" @mouseleave="changeButtonTextToSmaller($event)">About</a>
+          <a href="" @mouseover="changeButtonTextToBigger($event)"
+             @mouseleave="changeButtonTextToSmaller($event)">About</a>
         </h2>
       </router-link>
     </div>
@@ -73,6 +72,11 @@
   }
 </script>
 <style>
+  .nav-menu-piece {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+  }
 
   h1 {
     font-weight: 700;
@@ -97,11 +101,6 @@
     text-decoration: none;
     padding-bottom: 10px;
     padding-top: 10px;
-  }
-
-  .nav-menu-piece {
-    padding: 10px;
-    display: inline-block;
   }
 
   .astext {
