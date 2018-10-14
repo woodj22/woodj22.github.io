@@ -19,9 +19,8 @@
     },
     mounted: function () {
       this.show = true
-    },
+    }
   }
-
 </script>
 <style>
   .fade-enter-active, .fade-leave-active {
