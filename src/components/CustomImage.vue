@@ -1,7 +1,7 @@
 <template>
   <div id="custom-image">
     <div id="container">
-      <img id="image" :src="imagePath"/>
+      <img id="image" :src="imagePath" :alt="info"/>
       <h2 class="caption">{{info}}</h2>
     </div>
   </div>
