@@ -11,25 +11,30 @@
 </script>
 
 <style>
+  html {
+    background-color: #0c1116;
+
+  }
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
+    color: #ffffff;
     margin-top: 60px;
+    background-color: #0c1116;
   }
 
   header {
     margin: 0;
     height: 56px;
     padding: 0 16px 0 24px;
-    background-color: #35495E;
+    /*background-color: #35495E;*/
     color: #ffffff;
   }
 
   p {
-    color: rgb(17, 60, 88);
+    /*color: rgb(17, 60, 88);*/
     font-size: 15px;
     letter-spacing: 2px;
   }

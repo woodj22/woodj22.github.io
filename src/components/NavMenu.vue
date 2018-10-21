@@ -97,7 +97,7 @@
 
   a {
     font-weight: 500;
-    color: rgba(17, 60, 88, 0.44);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -105,6 +105,7 @@
 
   .astext {
     background: none;
+    cursor: pointer;
     border: none;
     text-decoration: none;
     padding-bottom: 10px;
