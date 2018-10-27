@@ -1,7 +1,8 @@
 <template>
   <div class="home">
     <div id="main">
-      <img id="portrait" :src=defaultImageSource @mouseover="mouseOver" @mouseleave="mouseLeave">
+      <rotating-anim></rotating-anim>
+      <!--<img id="portrait" :src=defaultImageSource @mouseover="mouseOver" @mouseleave="mouseLeave">-->
       <name-strap job ="Software Engineer"></name-strap>
     </div>
     <nav-menu></nav-menu>
@@ -25,6 +26,7 @@
   import 'vue-awesome/icons/linkedin'
   import NavMenu from '@/components/NavMenu'
   import NameStrap from '@/components/NameStrap'
+  import RotatingAnim from '@/components/rotating-anim'
 
   export default {
     name: 'Home',
@@ -46,7 +48,7 @@
         this.defaultImageSource = this.imageSource
       }
     },
-    components: {NavMenu, NameStrap}
+    components: {NavMenu, NameStrap, RotatingAnim}
   }
 </script>
 <style>
