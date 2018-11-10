@@ -1,6 +1,6 @@
 <template>
   <div id="rotating-anim">
-    <canvas width="800" height="400" id="canvas">
+    <canvas width="200" height="200" id="canvas">
     </canvas>
   </div>
 
@@ -59,28 +59,19 @@
 
 <style scoped>
 
-  #rotating-anim {
-    display: block;
+  #canvas {
 
-    display: block;
-    margin-left: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    background-size: cover;
     background-position: top center;
-    margin-left:25%;
-
+    width: 200px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 10%;
+    margin-left: auto;
     margin-right: auto;
-
+    display: block;
   }
-
-
-  /*#canvas {*/
-    /*padding-left: 0;*/
-    /*padding-right: 0;*/
-    /*margin-top: 10%;*/
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
-    /*display: block;*/
-    /*!*width: 800px;*!*/
-    /*!*height:400px;*!*/
-  /*}*/
 
 </style>
