@@ -1,6 +1,6 @@
 <template>
   <div id="rotating-anim">
-    <canvas width="200" height="200" id="canvas">
+    <canvas width="800" height="400" id="canvas">
     </canvas>
   </div>
 
@@ -26,13 +26,10 @@
         const ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         for (let i = 0; i<=width; i+=sampleCount) {
-          console.log(t)
-          let wavelength = 10
-          let v = 1
+          let wavelength = 10;
+          let v = 1;
           let y = (maxAmp * Math.cos(((2*Math.PI)/wavelength)*(i - (v*t))))
-          //
-          // y = Math.sin(i + (t) * maxAmp
-          let x = i + Math.sqrt( Math.pow(maxAmp, 2) - Math.pow(y, 2))
+
           this.drawCircle(ctx, i, y + 100, circleRadius)
         }
 
@@ -42,13 +39,14 @@
       const canvas = document.getElementById('canvas');
       if (canvas.getContext) {
         const circleRadius = 4;
-        const sampleCount = circleRadius + 5 ;
+
+        const sampleCount = circleRadius *2.25;
         const maxAmp = 50;
         let t = 0;
 
         const onAnimationFrame = () => {
           t+=0.01;
-          this.animateCircle(sampleCount, canvas, circleRadius, maxAmp, t)
+          this.animateCircle(sampleCount, canvas, circleRadius, maxAmp, t);
           requestAnimationFrame(onAnimationFrame);
         };
         requestAnimationFrame(onAnimationFrame);
@@ -62,9 +60,13 @@
 <style scoped>
 
   #rotating-anim {
+    display: block;
 
     display: block;
     margin-left: auto;
+    background-position: top center;
+    margin-left:25%;
+
     margin-right: auto;
 
   }
