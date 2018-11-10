@@ -60,14 +60,10 @@
 <style scoped>
 
   #canvas {
-
     object-fit: cover;
-    border-radius: 50%;
     background-size: cover;
     background-position: top center;
     width: 200px;
-    padding-left: 0;
-    padding-right: 0;
     margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
