@@ -9,17 +9,7 @@
 <script>
   export default {
     name: 'custom-image',
-    props: ['imagePath', 'info'],
-    data () {
-      return {
-        linkedInURL: 'https://www.linkedin.com/in/joe-wood-3237876b/'
-      }
-    },
-    methods: {
-      createImageFilePath: function (index) {
-        return '../../static/18_website_export/' + this.imageItems[index] + '.jpg'
-      }
-    }
+    props: ['imagePath', 'info']
   }
 </script>
 
@@ -27,7 +17,6 @@
 
   #container {
     display: inline-block;
-    backgroundColor: rgb(53, 73, 94);
     width: 100%;
     max-width: 700px;
     position: relative;
