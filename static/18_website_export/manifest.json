@@ -21,11 +21,6 @@
       "path": "../../static/18_website_export/website_ex-3.jpg"
     },
     {
-      "description": "2016: Nick in a buddhist burial ground. Mount Kōya, Japan",
-      "file_extension": "jpg",
-      "path": "../../static/18_website_export/website_ex-4.jpg"
-    },
-    {
       "description": "2016: Eddy stretching his legs after a long drive. Osaka, Japan",
       "file_extension": "jpg",
       "path": "../../static/18_website_export/website_ex-5.jpg"
@@ -39,6 +34,11 @@
       "description": "2018: Targus river. Lisbon, Portugal",
       "file_extension": "jpg",
       "path": "../../static/18_website_export/website_ex-8.jpg"
+    },
+     {
+      "description": "2016: Nick in a buddhist burial ground. Mount Kōya, Japan",
+      "file_extension": "jpg",
+      "path": "../../static/18_website_export/website_ex-4.jpg"
     },
     {
       "description": "2018: A skateboarder. Lisbon, Portugal",
