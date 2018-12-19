@@ -53,7 +53,7 @@
       return {
         linkedInURL: 'https://www.linkedin.com/in/joe-wood-3237876b/',
         githubURL: 'https://github.com/woodj22',
-        relativeCVPath: '../../static/JoeWoodCV2018.pdf'
+        relativeCVPath: '../../static/JoeWoodCV2019.pdf'
       }
     },
     methods: {

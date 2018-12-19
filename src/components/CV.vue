@@ -21,12 +21,12 @@
     data () {
       return {
         msg: 'This is my CV.',
-        pdfURI: '../../static/JoeWoodCV2018.pdf'
+        pdfURI: '../../static/JoeWoodCV2019.pdf'
       }
     },
     methods: {
       showPdf: function () {
-        window.open('./static/JoeWoodCV2018.pdf')
+        window.open('./static/JoeWoodCV2019.pdf')
       }
     }
   }
