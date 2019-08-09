@@ -19,5 +19,5 @@ npm run build --report
 ```
 ## Development process
 
-All development should be done on the `develop` branch. The project should then be built on the `gh-pages` branch before being pushed up to github. 
+Run the run build command. This will generate js script and css tags in the dist/index.html. Copy these tags to the index.html in the root and prefix the hrefs with dist. This is so that github pages can find the files which have been generated on build. 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
