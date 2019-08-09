@@ -10,8 +10,9 @@
 
     <div id="about-text">
       <p>
-        I work full time in the BBC's internal software engineering team. I mostly work with PHP Laravel projects
-        but I am doing more and more serverless event driven architecture in AWS. <br>
+        I work full time at gousto, a food meal kit company. 
+        we are building things in Python using an event driven, microservices architecture. All in AWS.
+        <br>
         <br>
         <br>
         In my spare time I take pictures and build Alexa skills.
